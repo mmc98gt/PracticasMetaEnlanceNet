@@ -2,12 +2,24 @@
 {
     public class Cita
     {
-        [Key]
-        public int citaID { get; set; }
-        public DateTime fechaHora { get; set; }
-        public string motivoCita { get; set; }
-        public Paciente paciente { get; set; }
-        public Medico medico { get; set; }
-        public Diagnostico diagnostico { get; set; }
+	public class Cita
+	{
+		[ScaffoldColumn(false)]                         
+		public int CitaID { get; set; }
+
+		[Required]
+		public DateTime FechaHora { get; set; }
+
+		[Required]
+		public string MotivoCita { get; set; }
+
+		[Required]
+		public Paciente Paciente { get; set; }         // relacion 0..* a 1 
+		public int PacienteID { get; set; }
+
+		[Required]
+		public Medico Medico { get; set; }              // relacion 0..* a 1
+		public int MedicoID { get; set; }
+		public Diagnostico Diagnostico { get; set; }    // relacion 1 a 1
     }
 }

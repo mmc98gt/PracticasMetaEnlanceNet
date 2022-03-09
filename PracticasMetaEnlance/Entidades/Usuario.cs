@@ -4,12 +4,20 @@ namespace PracticasMetaEnlance.Entidades
 {
     public class Usuario
     {
-        [Key]
-        public int UserId { get; set; }
-        public string usuario { get; set; }
-        public string nombre { get; set; }
-        public string apellidos { get; set; }
-        public string clave { get; set; }
+        [ScaffoldColumn(false)]
+        public int UsuarioID { get; set; }
+
+        [Required]
+        public string Nombre { get; set; }
+
+        [Required]
+        public string Apellidos { get; set; }
+
+        [Required]
+        public string Username { get; set; }        // No puede llamarse igual que la clase Usuario
+
+        [Required]
+        public string Clave { get; set; }
 
     }
 }

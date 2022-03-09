@@ -2,10 +2,27 @@
 {
     public class Paciente : Usuario
     {
-        public string NSS { get; set; }
-        public string numTarjeta { get; set; }
-        public string telefono { get; set; }
-        public string direccion { get; set; }
+        [Required]
+        public string NSS { get; set; }                         // ID del Paciente
+
+        [Required]
+        public string NumTarjeta { get; set; }
+
+        [Required]
+        public string Telefono { get; set; }
+
+        [Required]
+        public string Direccion { get; set; }
+
+        public List<Medico> Medicos { get; set; }        // relacion 1...* a 1...*
+
+        public List<Cita> Citas { get; set; }            // relacion 1 a 0...*
+
+        public Paciente()
+        {
+            Medicos = new List<Medico>();
+            Citas = new List<Cita>();
+        }
 
     }
 }

@@ -2,8 +2,18 @@
 {
     public class Medico : Usuario
     {
-       public string numColegiado { get; set; }
-       public ICollection<Paciente> pacientes { get; set; } = new List<Paciente>();
-       public ICollection<Cita> citas { get; set; } = new List<Cita>();
+        [Required]
+        public string NumColegiado { get; set; }                  // ID del médico
+
+        public List<Paciente> Pacientes { get; set; }     // relacion 1..* a 1..*
+
+        public List<Cita> Citas { get; set; }             // relacion 1 a 0..*
+
+        public Medico()
+        {
+            Pacientes = new List<Paciente>();
+            Citas = new List<Cita>();
+        }
+
     }
 }

@@ -2,11 +2,17 @@
 {
     public class Diagnostico
     {   
-        [Key]
-        public int diagnosticoID { }
-        public string valoracionEspecialista { get; set; }
-        public string enfermedad { get; set; }
-        public Cita cita { get; set; }
+        [ScaffoldColumn(false)]
+        public int DiagnosticoID { get; set; }
+
+        [Required]
+        public string ValoracionEspecialista { get; set; }
+
+        [Required]
+        public string Enfermedad { get; set; }
+
+        public int CitaID { get; set; }
+        public Cita Cita { get; set; }          // relacion 1 a 1
 
     }
 }
