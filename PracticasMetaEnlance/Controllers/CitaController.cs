@@ -1,12 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Clinica.Services;
-using Clinica.DTOs;
+using PracticasMetaEnlance.Services;
+using PracticasMetaEnlance.DTOs;
 
-namespace Clinica.Controllers
+namespace PracticasMetaEnlance.Controllers
 {
 
     [Route("api/[controller]")]
@@ -19,7 +15,6 @@ namespace Clinica.Controllers
             this.citaService = citaService;
         }
 
-        // GET: api/Citas/5
         [HttpGet("{id}")]
         public ActionResult<CitaDTO> GetCita(int id)
         {
@@ -30,7 +25,7 @@ namespace Clinica.Controllers
             }
             return cita;
         }
-        // GET: api/Citas
+
         [HttpGet()]
         public ActionResult<List<CitaDTO>> GetCitas()
         {
@@ -42,14 +37,12 @@ namespace Clinica.Controllers
             return citas;
         }
 
-        // Add Cita
         [HttpPost]
         public ActionResult<CitaDTO> AddUsuario(CitaDTO citaDTO)
         {
             return citaService.Put(citaDTO);
         }
 
-        // Remove Cita
         [HttpDelete("{id}")]
         public ActionResult RemoveCita(int id)
         {

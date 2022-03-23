@@ -1,7 +1,11 @@
-﻿namespace PracticasMetaEnlance.Entidades
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace PracticasMetaEnlance.Entidades
 {
     public class Medico : Usuario
     {
+        public int Id { get; set; }
+
         [Required]
         public string NumColegiado { get; set; }                  // ID del médico
 

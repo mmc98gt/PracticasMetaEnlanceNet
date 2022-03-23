@@ -1,9 +1,10 @@
-﻿namespace PracticasMetaEnlance.Entidades
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace PracticasMetaEnlance.Entidades
 {
-    public class Cita
-    {
-	public class Cita
+	public class Cita : IEntity
 	{
+		public int Id { get; set; }
 		[ScaffoldColumn(false)]                         
 		public int CitaID { get; set; }
 
@@ -11,15 +12,15 @@
 		public DateTime FechaHora { get; set; }
 
 		[Required]
-		public string MotivoCita { get; set; }
+		public string? MotivoCita { get; set; }
 
 		[Required]
-		public Paciente Paciente { get; set; }         // relacion 0..* a 1 
+		public Paciente? Paciente { get; set; }         // relacion 0..* a 1 
 		public int PacienteID { get; set; }
 
 		[Required]
-		public Medico Medico { get; set; }              // relacion 0..* a 1
+		public Medico? Medico { get; set; }              // relacion 0..* a 1
 		public int MedicoID { get; set; }
-		public Diagnostico Diagnostico { get; set; }    // relacion 1 a 1
+		public Diagnostico? Diagnostico { get; set; }    // relacion 1 a 1
     }
 }

@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
-using Clinica.Entities;
-using Clinica.DTOs;
-using Clinica.Repositories;
+﻿using AutoMapper;
+using PracticasMetaEnlance.DTOs;
+using PracticasMetaEnlance.Entidades;
+using PracticasMetaEnlance.Repositories;
 
-namespace Clinica.Services
+namespace PracticasMetaEnlance.Services
 {
     public class CitaService : ICitaService
     {
@@ -70,7 +66,7 @@ namespace Clinica.Services
                 PacienteID = citaDTO.PacienteID
             };
 
-            clinicaDbContext.Citas.Add(cita);
+            Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<Cita> entityEntry = clinicaDbContext.Citas.Add(cita);
             clinicaDbContext.SaveChanges();
             return citaDTO;
         }

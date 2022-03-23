@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
-using Clinica.Entities;
-using Clinica.DTOs;
-using Clinica.Repositories;
-using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using PracticasMetaEnlance.DTOs;
+using PracticasMetaEnlance.Entidades;
+using PracticasMetaEnlance.Repositories;
 
-namespace Clinica.Services
+namespace PracticasMetaEnlance.Services
 {
     public class DiagnosticoService : IDiagnosticoService
     {

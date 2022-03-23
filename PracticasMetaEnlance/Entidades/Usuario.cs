@@ -2,8 +2,10 @@
 
 namespace PracticasMetaEnlance.Entidades
 {
-    public class Usuario
+    public class Usuario : IEntity
     {
+        public int Id { get; set; }
+
         [ScaffoldColumn(false)]
         public int UsuarioID { get; set; }
 
@@ -18,6 +20,5 @@ namespace PracticasMetaEnlance.Entidades
 
         [Required]
         public string Clave { get; set; }
-
     }
 }

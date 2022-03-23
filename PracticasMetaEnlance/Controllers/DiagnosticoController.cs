@@ -1,12 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Clinica.Services;
-using Clinica.DTOs;
+using PracticasMetaEnlance.Services;
+using PracticasMetaEnlance.DTOs;
 
-namespace Clinica.Controllers
+namespace PracticasMetaEnlance.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -18,7 +14,6 @@ namespace Clinica.Controllers
             this.diagnosticoService = diagnosticoService;
         }
 
-        // GET: api/Diagnosticos/5
         [HttpGet("{id}")]
         public ActionResult<DiagnosticoDTO> GetDiagnostico(int id)
         {
@@ -29,7 +24,7 @@ namespace Clinica.Controllers
             }
             return diagnostico;
         }
-        // GET: api/Diagnosticos
+
         [HttpGet()]
         public ActionResult<List<DiagnosticoDTO>> GetDiagnosticos()
         {
@@ -41,14 +36,12 @@ namespace Clinica.Controllers
             return diagnosticos;
         }
 
-        // Add Diagnostico
         [HttpPost]
         public ActionResult<DiagnosticoDTO> AddUsuario(DiagnosticoDTO diagnosticoDTO)
         {
             return diagnosticoService.Put(diagnosticoDTO);
         }
 
-        // Remove Diagnostico
         [HttpDelete("{id}")]
         public ActionResult RemoveDiagnostico(int id)
         {

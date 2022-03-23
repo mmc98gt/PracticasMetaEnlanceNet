@@ -1,16 +1,8 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Clinica.DTOs;
-using Clinica.Services;
-using Clinica.Entities;
 
-namespace Clinica.Controllers
+namespace PracticasMetaEnlance.Controllers
 {
     public class HomeController : Controller
     {
@@ -41,7 +33,7 @@ namespace Clinica.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+
         }
     }
 }

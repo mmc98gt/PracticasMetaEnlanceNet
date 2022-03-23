@@ -3,10 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Clinica.DTOs;
-using Clinica.Services;
+using PracticasMetaEnlance.DTOs;
+using PracticasMetaEnlance.Services;
 
-namespace Clinica.Controllers
+namespace PracticasMetaEnlance.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -18,7 +18,6 @@ namespace Clinica.Controllers
             this.usuarioService = usuarioService;
         }
 
-        // GET: api/Usuario
         [HttpGet]
         public ActionResult<List<UsuarioDTO>> GetUsuarios()
         {
@@ -30,7 +29,6 @@ namespace Clinica.Controllers
                 return usuarios;
         }
 
-        // GET: api/Usuario/1
         [HttpGet("{id}")]
         public ActionResult<UsuarioDTO> GetUsuario(int id)
         {

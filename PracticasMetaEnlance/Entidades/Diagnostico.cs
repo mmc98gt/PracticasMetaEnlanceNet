@@ -1,7 +1,11 @@
-﻿namespace PracticasMetaEnlance.Entidades
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace PracticasMetaEnlance.Entidades
 {
-    public class Diagnostico
-    {   
+    public class Diagnostico : IEntity
+    {
+        public int Id { get; set; }
+
         [ScaffoldColumn(false)]
         public int DiagnosticoID { get; set; }
 

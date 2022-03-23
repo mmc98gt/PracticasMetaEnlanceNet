@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Clinica.DTOs;
-using Clinica.Entities;
+﻿using PracticasMetaEnlance.DTOs;
 
-namespace Clinica.Services
+namespace PracticasMetaEnlance.Services
 {
     public interface IMedicoService
     {
-        //    Boolean ExaminarPaciente(Cita cita, Paciente paciente);
-        //    Diagnostico EmitirDiagnostico(Cita cita, Paciente paciente);
         public List<MedicoDTO> GetAll();
         public MedicoDTO Get(int id);
         public MedicoDTO Put(MedicoDTO medicoDTO);

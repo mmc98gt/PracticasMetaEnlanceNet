@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using PracticasMetaEnlance.Repositories;
+using PracticasMetaEnlance.DTOs;
 using AutoMapper;
-using Clinica.Entities;
-using Clinica.Repositories;
-using Clinica.Services;
-using Clinica.DTOs;
+using PracticasMetaEnlance.Entidades;
 
-namespace Clinica.Services
+namespace PracticasMetaEnlance.Services
 {
     public class UsuarioService : IUsuarioService
     {

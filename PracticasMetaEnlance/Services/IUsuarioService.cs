@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Clinica.DTOs;
+﻿using PracticasMetaEnlance.DTOs;
 
-namespace Clinica.Services
+namespace PracticasMetaEnlance.Services
 {
     public interface IUsuarioService
     {
